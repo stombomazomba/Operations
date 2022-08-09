@@ -1,0 +1,73 @@
+﻿@page "/operationss"
+@inject HttpClient client
+@using Operations.Shared.Models
+@using System.Net.Http.Json 
+@using Microsoft.JSInterop
+@using Microsoft.AspNetCore
+@inject IJSRuntime js
+<h3>FetchData</h3>
+<small>Add as many operations as you wish.</small>
+<div class="form-group">
+    <a class="btn btn-success" href="operationss/CreateOperation"><i class="oi oi-plus"></i> Create New</a>
+</div>
+<br>
+
+@if (operationss == null)
+{
+    <text>Loading...</text>
+}
+else if (operationss.Length == 0)
+{
+    <text>No Records Found.</text>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Operation Id</th>
+                <th>Name</th>
+                <th>Order To Perform</th>
+                <th>Image Data</th>
+                <th>Device</th>
+                <th></th>
+            </tr>
+        </thead>
+         <tbody>
+            @foreach (Operationss ope in operationss)
+            {
+                <tr>
+                    <td>@ope.OperationID</td>
+                    <td>@ope.Name</td>
+                    <td>@ope.OrderToPerform</td>
+                    <td>@ope.ImageData</td>
+                    <td>@ope.Device</td>
+                    <td>
+                        <a class="btn btn-success" href="operationss/edit/@ope.">Edit</a>
+                        <button class="btn btn-danger" @onclick="@(() => Delete(ope.OperationID))">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @code {
+
+    Operationss [] operationss { get; set; }
+    
+    protected override async Task OnInitializedAsync()
+    {
+        operationss = await client.GetFromJsonAsync<Operationss[]>("api/operationss");
+    }
+    protected async Task Delete(int OperationId)
+    {
+        var ope = operationss.First(x => x.OperationID == OperationId);
+        if (await js.InvokeAsync<bool>("confirm", $"Do you want to delete {ope.Name}'s ({ope.OperationID}) Record?"))
+        {
+            await client.DeleteAsync($"api/operationss/{OperationId}");
+            await OnInitializedAsync();
+        }
+    }
+    }
+    
+}

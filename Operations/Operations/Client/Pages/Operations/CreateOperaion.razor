@@ -1,0 +1,22 @@
+﻿@page "/operationss/CreateOperation"
+@inject HttpClient http
+@inject NavigationManager uriHelper
+@inject IJSRuntime js
+@using Operations.Shared.Models
+
+<h3>CreateOperaion</h3>
+
+<Form ButtonText ="Create Operation" ope="@ope" 
+	OnValidSubmit="@CreateOperation"/>
+
+@code {
+	
+	Operationss ope = new Operationss();
+
+	async Task CreateOperation()
+	{
+		await http.PostAsJsonAsync("api/operationss", ope);
+		uriHelper.NavigateTo("operationss");
+	}
+
+}

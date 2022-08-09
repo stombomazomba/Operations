@@ -1,0 +1,12 @@
+C:\Users\stomb\OneDrive\Documents\Visual Studio 2022\Projects\Operations\Operations\Shared\bin\Debug\net6.0\Operations.Shared.deps.json
+C:\Users\stomb\OneDrive\Documents\Visual Studio 2022\Projects\Operations\Operations\Shared\bin\Debug\net6.0\Operations.Shared.dll
+C:\Users\stomb\OneDrive\Documents\Visual Studio 2022\Projects\Operations\Operations\Shared\bin\Debug\net6.0\Operations.Shared.pdb
+C:\Users\stomb\OneDrive\Documents\Visual Studio 2022\Projects\Operations\Operations\Shared\obj\Debug\net6.0\Operations.Shared.csproj.AssemblyReference.cache
+C:\Users\stomb\OneDrive\Documents\Visual Studio 2022\Projects\Operations\Operations\Shared\obj\Debug\net6.0\Operations.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stomb\OneDrive\Documents\Visual Studio 2022\Projects\Operations\Operations\Shared\obj\Debug\net6.0\Operations.Shared.AssemblyInfoInputs.cache
+C:\Users\stomb\OneDrive\Documents\Visual Studio 2022\Projects\Operations\Operations\Shared\obj\Debug\net6.0\Operations.Shared.AssemblyInfo.cs
+C:\Users\stomb\OneDrive\Documents\Visual Studio 2022\Projects\Operations\Operations\Shared\obj\Debug\net6.0\Operations.Shared.csproj.CoreCompileInputs.cache
+C:\Users\stomb\OneDrive\Documents\Visual Studio 2022\Projects\Operations\Operations\Shared\obj\Debug\net6.0\Operations.Shared.dll
+C:\Users\stomb\OneDrive\Documents\Visual Studio 2022\Projects\Operations\Operations\Shared\obj\Debug\net6.0\refint\Operations.Shared.dll
+C:\Users\stomb\OneDrive\Documents\Visual Studio 2022\Projects\Operations\Operations\Shared\obj\Debug\net6.0\Operations.Shared.pdb
+C:\Users\stomb\OneDrive\Documents\Visual Studio 2022\Projects\Operations\Operations\Shared\obj\Debug\net6.0\ref\Operations.Shared.dll
